@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pink Cute Photobooth 💖</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="mobile-warning">📱 Akses via HP / Tablet</div>
+
+<div class="app">
+  <h1>💗 Cute Photobooth 💗</h1>
+
+  <div class="camera-box" id="stage">
+    <video id="video" autoplay playsinline></video>
+    <img id="frame" class="frame">
+  </div>
+
+  <canvas id="canvas" width="600" height="400" hidden></canvas>
+
+  <div class="controls">
+    <button onclick="toggleMirror()">🪞</button>
+    <button onclick="startTimer(3)">⏱ 3s</button>
+    <button onclick="startTimer(5)">⏱ 5s</button>
+    <button onclick="takePhoto()">📸</button>
+    <button onclick="downloadPhoto()">⬇</button>
+  </div>
+
+  <h3>🎀 Frame</h3>
+  <div class="options">
+    <button onclick="changeFrame('frames/frame1.png')">Frame 1</button>
+    <button onclick="changeFrame('frames/frame2.png')">Frame 2</button>
+  </div>
+
+  <h3>✨ Stiker</h3>
+  <div class="options">
+    <button onclick="createSticker('stickers/love.png')">❤️ Love</button>
+    <button onclick="createSticker('stickers/star.png')">⭐ Star</button>
+    <button onclick="createSticker('stickers/smile.png')">😊 Smile</button>
+  </div>
+
+  <img id="result" class="result">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
